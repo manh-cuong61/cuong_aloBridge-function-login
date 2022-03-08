@@ -27,12 +27,18 @@
         width: 90%;
     }
     .remember .recovery {
-        margin-left: 25px;
+        margin-left: 103px;
     }
     .login-button .main-login {
         width: 90%;
     }
     .main-google .input-all {
         width: 90%;
+    }
+    .main-google .input-all img {
+        margin-left: 72px;
+    }
+    .main-google .input-all input {
+        width: 39%;
     }
 }
