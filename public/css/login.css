@@ -1,0 +1,166 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    background-color: #f2eeee;
+}
+
+.main {
+    float: right;
+    display: flex;
+    width: 90%;
+    height: auto;
+}
+.main-left {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-top-left-radius: 5%;
+    border-bottom-left-radius: 5%;
+    width: 50%;
+}
+
+.main-right {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 50%;
+    background-color: white;
+}
+
+.main-right .login-header h1 {
+    text-align: center;
+    margin-top: 80px;
+    color: #3b3b39;
+}
+
+.main-right .login-header p {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    color: #7f7e74;
+} 
+
+form .login-input {
+    margin: auto;
+}
+form .login-input label{
+    display: block;
+    margin-bottom: 2px;
+    margin-top: 15px;
+}
+form .login-input .main-email, .main-password, .remember, .main-login {
+    width: 50%;
+    margin: auto;
+}
+.input-all {
+    width: 100%;
+    display: flex;
+    margin-bottom: 5px;
+}
+.input-all .input-left{
+    width: 5%;
+    border: 1px solid #8f8888;
+    height: 30px;
+    border-right: none;
+    border-top-left-radius:19%;
+    border-bottom-left-radius:19%;
+}
+.input-all .img{
+    width: 10%;
+    border: 1px solid #8f8888;
+    height: 30px;
+    border-left: none;
+    border-top-right-radius:19%;
+    border-bottom-right-radius:19%;
+    line-height: 30px
+}
+.input-all .img {
+    color: #9a9a9a;
+    font-weight: 100;
+}
+.input-all .input-main {
+    width: 85%;
+    border: 1px solid #8f8888;
+    height: 30px;
+    border-left: none;
+    border-right: none;
+}
+.input-all input {
+    width: 80%;
+    line-height: 25px;
+    outline: none;
+    border: none;
+}
+.remember .recovery {
+    margin-left: 45px;
+    color: #185bbf;
+}
+.remember .keep-me {
+    font-size: 15px;
+    color: #525350;
+}
+.login-button {
+    width: 100%;
+    text-align: center;
+}
+.login-button .main-login {
+    width: 50%;
+    height: 30px;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    border: none;
+    
+}
+.login-button .main-login .input-left, .main-login .input-main, .main-login .img {
+    background-color: #185bbf;
+}
+.login-button .main-login input {
+    background-color: #185bbf;
+    font-size: 15px;
+    color: white;
+    line-height: 28px;
+    cursor: pointer;
+}
+.main-google .input-main {
+    display: flex;
+}
+.main-google .input-all {
+    margin: auto;
+    width: 50%;
+    cursor: pointer;
+}
+.main-google .input-all input{
+    color: #525350;
+    background-color: white;
+    line-height: 28px;
+    cursor: pointer;
+    width: 60%;
+}
+.main-google .input-all img {
+    height: 100%;
+    margin-left: 26px;
+}
+
+.login-footer {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.login-footer h4 {
+    margin-left: 15px;
+    cursor: pointer;
+}
+.main-left img {
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 5%;
+    border-bottom-left-radius: 5%;
+}
+.input span {
+    font-size: 15px;
+    color: red;
+}
