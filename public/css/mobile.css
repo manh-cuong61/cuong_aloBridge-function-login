@@ -24,15 +24,15 @@
         display: none;
     }
     form .login-input .main-email, .main-password, .remember, .main-login {
-        width: 70%;
+        width: 90%;
     }
     .remember .recovery {
         margin-left: 25px;
     }
     .login-button .main-login {
-        width: 70%;
+        width: 90%;
     }
     .main-google .input-all {
-        width: 70%;
+        width: 90%;
     }
 }

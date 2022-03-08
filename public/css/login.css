@@ -10,14 +10,14 @@ body {
 }
 
 .main {
-    float: right;
     display: flex;
     width: 90%;
     height: auto;
+    margin: auto;
 }
 .main-left {
     margin-top: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     border-top-left-radius: 5%;
     border-bottom-left-radius: 5%;
     width: 50%;
@@ -25,9 +25,12 @@ body {
 
 .main-right {
     margin-top: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     width: 50%;
     background-color: white;
+    height: 560px;
+    border-top-right-radius: 5%;
+    border-bottom-right-radius: 5%;
 }
 
 .main-right .login-header h1 {
