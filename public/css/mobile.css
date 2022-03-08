@@ -1,0 +1,44 @@
+@media only screen and (max-width: 600px) {
+    body {
+        width: 100%;
+        background-color: white;
+    }
+    .main {
+        width: 100%;
+        display: block;
+        margin-top: 90px;
+    }
+    .main-left {
+        display: none;
+    }
+    .main-right {
+        width: 100%;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    .main-right .login-header h1 {
+        margin-top: 0px;
+        margin-bottom: 30px;
+    }
+    .main-right .login-header p {
+        display: none;
+    }
+    form .login-input .main-email, .main-password, .remember, .main-login {
+        width: 90%;
+    }
+    .remember .recovery {
+        margin-left: 103px;
+    }
+    .login-button .main-login {
+        width: 90%;
+    }
+    .main-google .input-all {
+        width: 90%;
+    }
+    .main-google .input-all img {
+        margin-left: 72px;
+    }
+    .main-google .input-all input {
+        width: 39%;
+    }
+}
