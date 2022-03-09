@@ -69,7 +69,7 @@ class Route
                 if (count($routeParams) !== count($requestParams)) {
                     continue;
                 }
-                $checkurl = 1;
+                $checkurl = true;
                 foreach ($routeParams as $key => $rp) {
                     //check parameter
                     if (preg_match('/^{\w+}$/', $rp)) {
@@ -78,22 +78,21 @@ class Route
                     }
                     //check url value without parameter
                     if (strcmp(strtolower($rp), strtolower($requestParams[$key])) !== 0) {
-                        $checkurl = 0;
+                        $checkurl = false;
+                        break;
                     }
                 }
-                if ($checkurl == 0) {
+                if ($checkurl == false) {
                     continue;
                 }
                 $checkRoute = true;
             }
 
-            if ($checkRoute = true) {
+            if ($checkRoute == true) {
                 if (is_callable($action)) {
                     call_user_func_array($action, $params);
                 }
                 return;
-            } else {
-                continue;
             }
         }
         return;

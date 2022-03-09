@@ -11,8 +11,10 @@ class HomeController
 
     
     public function index(){
+       
         if($this->auth()) {
-            echo 'ok';
+            echo $_COOKIE['cookie_email'];
+            echo $_SESSION['sess_email'];
         }else {
             require (__DIR__ . "/../../views/users/login.php");
         }

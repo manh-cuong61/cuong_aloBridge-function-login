@@ -26,19 +26,20 @@ class AuthModel
 
           $query = "select * from `users` where `email`=:email and `password`=:password";
           $stmt = $this->connection->pdo->prepare($query);
-          $stmt->bindParam('email', $email, PDO::PARAM_STR);
+          $stmt->bindValue('email', $email, PDO::PARAM_STR);
           $stmt->bindValue('password', $password, PDO::PARAM_STR);
           $stmt->execute();
           $count = $stmt->rowCount();
           $row   = $stmt->fetch(PDO::FETCH_ASSOC);
           if ($count == 1 && !empty($row)) {
+            $_SESSION['sess_email'] = $row['email'];
+            setcookie("cookie_email", $row['email'], time() + 60);
             $_SESSION['loggedin'] = true;
             if (isset($_POST["remember"]) && $_POST["remember"] == 1) {
               setcookie("login", "1", time() + 60);
-              return 1;
-            } else {
-              return 1;
             }
+            return true;
+          
           }
         } catch (PDOException $e) {
           return "Error : " . $e->getMessage();
