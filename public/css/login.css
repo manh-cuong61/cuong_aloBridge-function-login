@@ -104,7 +104,7 @@ form .login-input .main-email, .main-password, .remember, .main-login {
     border: none;
 }
 .remember .recovery {
-    margin-left: 56px;
+    margin-left: 50px;
     color: #185bbf;
 }
 .remember{

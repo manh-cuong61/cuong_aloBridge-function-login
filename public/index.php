@@ -1,3 +1,9 @@
 <?php
 
- require __DIR__. "/../views/Users/login.php";
+    require __DIR__ . "/../vendor/autoload.php";
+ 
+    use Core\App;
+    
+    $app = new App;
+	
+    $app -> getRoute();
