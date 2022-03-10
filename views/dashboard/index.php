@@ -8,6 +8,12 @@
     <title>Document</title>
     <link rel="stylesheet" href="/aloBridge-function-login/public/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <style>
+        .main-bar .content-nav .el1 {
+            background-color: #666;
+            color: white;
+        }
+    </style>
 </head>
 
 <body>

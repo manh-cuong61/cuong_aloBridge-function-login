@@ -17,7 +17,7 @@
             <?php require(__DIR__ . "/../layouts/header-content.php") ?>
         </div>
     </div>
-    <script src="/aloBridge-function-login-demo/public/js/home.js"></script>
+    <!-- <script src="/aloBridge-function-login-demo/public/js/home.js"></script> -->
 </body>
 
 </html>
