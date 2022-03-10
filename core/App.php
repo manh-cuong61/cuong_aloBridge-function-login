@@ -23,9 +23,9 @@ class App
             $auth = new AuthController;
             $auth->login();
         });
-        $this->route->get('/home/{id}', function () {
+        $this->route->get('/dashboard', function () {
             $auth = new HomeController;
-            $auth->index();
+            $auth->dashboard();
         });
         $this->route->any('*', function () {
             echo '404 notfound';

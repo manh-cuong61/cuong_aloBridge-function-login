@@ -13,10 +13,13 @@ class HomeController
     public function index(){
        
         if($this->auth()) {
-            echo $_COOKIE['cookie_email'];
-            echo $_SESSION['sess_email'];
+            require (__DIR__ . "/../../views/layouts/app.php");
         }else {
             require (__DIR__ . "/../../views/users/login.php");
         }
+    }
+
+    public function dashboard(){
+        require(__DIR__. "/../../views/dashboard/index.php");
     }
 }
