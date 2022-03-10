@@ -13,6 +13,9 @@
             background-color: #666;
             color: white;
         }
+        .main-bar .content-nav .el1 a {
+            color: white;
+        }
     </style>
 </head>
 

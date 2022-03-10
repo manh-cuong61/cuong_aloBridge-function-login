@@ -75,6 +75,7 @@ body {
     font-size: 1rem;
     align-items: center;
     cursor: pointer;
+    
 }
 
 .main-bar .content-nav .el i {
@@ -86,7 +87,6 @@ body {
     text-decoration: none;
     margin-left: 7px;
     color: #453e3e;
-
 }
 
 .main-bar .account span {
@@ -105,9 +105,9 @@ body {
 .account .content-acc .el a {
     font-size: 1rem;
     font-weight: normal;
-    color: #453e3e;
     margin-left: 7px;
     text-decoration: none;
+    color: #453e3e;
 }
 .account .content-acc .el i {
     margin-left: 15px;
@@ -167,14 +167,21 @@ body {
 }
 .content .header i {
     margin-left: 5px;
+    font-size: 0.9rem;
 }
 .content .header span {
     margin-left: 5px;
-    font-weight: bold;
     cursor: pointer;
+    font-size: 0.9rem;
 }
 .el:hover {
     background-color: #666;
+    color: white;
+}
+.main-bar .content-nav .el:hover a {
+    color: white;
+}
+.account .content-acc .el:hover a {
     color: white;
 }
 .main-content h1 {
