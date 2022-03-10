@@ -89,6 +89,7 @@
             </div>
         </div>
     </div>
+    <script src="/aloBridge-function-login-demo/public/js/home.js"></script>
 </body>
 
 </html>

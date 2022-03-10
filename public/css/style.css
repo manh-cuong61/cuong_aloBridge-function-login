@@ -17,27 +17,25 @@ body {
 }
 .sidebar {
     width: 20%;
-    border-radius: 5px;
     background-color: white;
 }
 .content {
     width: 80%;
     background-color: white;
-    border-left: 2px solid #ebeaea;
-    border-radius: 5px;
+    border-left: 0.1rem solid #ebeaea;
 }
 .header {
     border-bottom: 2px solid #ebeaea;
-    height: 50px;
+    height: 3.5rem;
     display: flex;
     align-items: center;
 }
 .main-bar {
-    height: 400px;
+    height: 25rem;
 }
 .footer {
     border-top: 2px solid #ebeaea;
-    height: 50px;
+    height: 3.5rem;
 }
 .nav {
     height: 65%;
@@ -47,15 +45,15 @@ body {
 }
 .main-bar .nav .header-nav {
     height: 15%;
-    padding-top: 13px;
+    padding-top: 1rem;
 }
 .main-bar .account .header-acc {
     height: 25%;
-    padding-top: 13px;
+    padding-top: 1rem;
 }
 
 .header i.logo {
-    font-size: 27px;
+    font-size: 1.7rem;
     margin-left: 6%;
 }
 .header h3 {
@@ -67,46 +65,50 @@ body {
 }
 .main-bar .nav span {
     display: block;
-    font-size: 13px;
+    font-size: 0.8rem;
     font-weight: bold;
-    margin-left: 10px;
+    margin-left: 0.6rem;
 }
 .main-bar .content-nav .el {
     display: flex;
-    margin-top: 15px;
-    font-size: 18px;
+    margin-top: 0.9rem;
+    font-size: 1.1rem;
     align-items: center;
     cursor: pointer;
 }
 .main-bar .content-nav .el1 {
-    margin-top: 10px;
+    margin-top: 0.6rem;
 }
 .main-bar .content-nav .el i {
-    margin-left: 15px;
+    margin-left: 1rem;
 }
 .main-bar .content-nav .el span {
-    font-size: 15px;
+    font-size: 0.9rem;
     font-weight: normal;
 }
 
 .main-bar .account span {
     display: block;
-    font-size: 13px;
+    font-size: 0.8rem;
     font-weight: bold;
-    margin-left: 10px;
+    margin-left: 0.6rem;
 }
 .account .content-acc .el {
     display: flex;
-    margin-top: 15px;
-    font-size: 18px;
+    margin-top: 0.9rem;
+    font-size: 1.1rem;
     align-items: center;
     cursor: pointer;
 }
+.account .content-acc .el span {
+    font-size: 0.9rem;
+    font-weight: normal;
+}
 .account .content-acc .el i {
-    margin-left: 15px;
+    margin-left: 1rem;
 }
 .account .content-acc .el1 {
-    margin-top: 10px;
+    margin-top: 0.6rem;
 }
 
 .footer {
@@ -117,7 +119,7 @@ body {
 }
 .footer .brightness {
     border: 1px solid black;
-    height: 30px;
+    height: 1.8rem;
     width: 80%;
     border-radius: 5px;
     display: flex;
@@ -130,7 +132,7 @@ body {
     height: 80%;
     border: 1px solid black;
     border-radius: 5px;
-    font-size: 14px;
+    font-size: 0.9rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -145,18 +147,21 @@ body {
     height: 80%;
     margin-left: 2px;
     border-radius: 5px;
-    font-size: 14px;
+    font-size: 0.9rem;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color:#ebeaea;
     cursor: pointer;
 }
+.footer .brightness .dark span {
+    margin-left: 4px;
+}
 .content .header {
     border-bottom: 1px solid #ebeaea 2px;
     display: flex;
     align-items: flex-end;
-    font-size: 17px;
+    font-size: 1rem;
 }
 .content .header i {
     margin-left: 5px;
@@ -165,4 +170,8 @@ body {
     margin-left: 5px;
     font-weight: bold;
     cursor: pointer;
+}
+.acctive, .el:hover {
+    background-color: #666;
+    color: white;
 }
