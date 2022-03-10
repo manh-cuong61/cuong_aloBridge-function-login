@@ -13,9 +13,13 @@ class HomeController
     public function index(){
        
         if($this->auth()) {
-            require (__DIR__ . "/../../views/layouts/sidebar.php");
+            require (__DIR__ . "/../../views/layouts/app.php");
         }else {
             require (__DIR__ . "/../../views/users/login.php");
         }
+    }
+
+    public function dashboard(){
+        require(__DIR__. "/../../views/dashboard/index.php");
     }
 }
