@@ -26,7 +26,7 @@
                     Temporibus praesentium perferendis minima, laboriosam neque
                 </p>
             </div>
-            <form action="">
+            <form action="login" method="POST">
                 <div class="login-input">
                     <div class="main-email">
                         <div class="input">
