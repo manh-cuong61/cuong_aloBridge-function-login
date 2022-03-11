@@ -204,16 +204,15 @@ body {
     border-top:1px solid #ccc;
     border-bottom:1px solid #ccc;
     margin-left: 0px;
-    padding-left: 0px;
-    padding-left: 55px;
+    padding-left: 10px;
     background-color: #666;
     color: white;
 }
 .content table td{
+    padding-left: 10px;
     height: 16%;
     border-top:1px solid #ccc;
     border-bottom:1px solid #ccc;
-    padding-left: 55px;
 }
 .content table #th1{
     font-weight:bold;
@@ -222,13 +221,48 @@ body {
 .content table #td1{
     font-weight: bold;
 }
+.content table tr td a {
+    display: block;
+    border: 1px solid #666;
+    border-radius: 5px;
+    width: 55%;
+    font-size: 16px;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    height: 45%;
+    padding-top: 5px;
+}
+.content table tr td .button-delete {
+    background-color: #db5353;
+}
+.content table tr td .button-edit {
+    background-color: #18c418;
+}
 .footer .paginate {
-    padding: auto;
-    margin: auto;
-    width: 30%;
-    height: 60%;
-    border: none;   
+    list-style-type: none;
     display: flex;
+}
+.footer .paginate li{
+    padding: 7px;
+    border: 1px solid #666;
+    padding-left: 15px;
+    padding-right: 15px;
+
+}
+.footer .paginate .el-start{
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+.footer .paginate .el-end{
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.footer .paginate li a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    color: #666;
 }
 .footer .paginate .el {
     border: 1px solid #666;
@@ -250,20 +284,4 @@ body {
 .footer .paginate .el-start {
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-}
-.footer .paginate .el span {
-    display: block;
-}
-
-.footer .el:hover {
-    background-color: #666;
-}
-.footer .el:hover span {
-    color: white;
-}
-.footer .paginate .dot {
-    background-color: white;
-    color: #666;
-    border: none;
-    padding-top: 0.8125rem;
 }

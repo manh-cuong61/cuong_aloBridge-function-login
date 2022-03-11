@@ -16,7 +16,7 @@
                 </div>
                 <div class="el">
                     <i class="fa-solid fa-building-columns"></i>
-                    <a href="">Bank Accounts</a>
+                    <a href="product">Products</a>
                 </div>
                 <div class="el">
                     <i class="fa-solid fa-shuffle"></i>

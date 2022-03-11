@@ -8,7 +8,11 @@ session_start();
 class HomeController
 {
     use Authenticate;
-
+    public function __construct()
+    {
+        echo '<pre>';
+        var_dump($_GET['user']);
+    }
     
     public function index(){
        

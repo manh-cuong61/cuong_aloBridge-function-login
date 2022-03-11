@@ -7,7 +7,8 @@ class Route
     private $routes = [];
     private function getRequestUrl()
     {
-        $url = str_replace('/aloBridge-function-login/public', '', $_SERVER['REQUEST_URI']);
+        $url_query = explode('?', $_SERVER['REQUEST_URI']);
+        $url = str_replace('/aloBridge-function-login/public', '',  $url_query[0]);
         $url = isset($url) ? $url : '/';
         $url = $url === '' || empty($url) ? '/' : $url;
         return $url;
