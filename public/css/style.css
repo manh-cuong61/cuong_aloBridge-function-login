@@ -231,20 +231,19 @@ body {
     display: flex;
 }
 .footer .paginate .el {
-    border: 1px solid black;
+    border: 1px solid #666;
     width: 20%;
     height: 100%;
-    border-right: none;
     cursor: pointer;
     font-size: 18px;
     font-weight: bold;
     text-align: center;
     padding-top: 0.25rem;
-    background-color: #666;
-    color: white;
+    background-color: white;
+    color: #666;
+    margin-left: 2px;
 }
 .footer .paginate .el-end {
-    border-right: 1px solid black;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
 }
@@ -257,8 +256,14 @@ body {
 }
 
 .footer .el:hover {
-    background-color: white;
+    background-color: #666;
 }
 .footer .el:hover span {
+    color: white;
+}
+.footer .paginate .dot {
+    background-color: white;
     color: #666;
+    border: none;
+    padding-top: 0.8125rem;
 }

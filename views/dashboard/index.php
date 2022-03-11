@@ -66,10 +66,16 @@
             <div class="footer">
                 <div class="paginate">
                     <div class="el el-start">
+                        <span><</span>
+                    </div>
+                    <div class="el">
                         <span>1</span>
                     </div>
                     <div class="el">
                         <span>2</span>
+                    </div>
+                    <div class="el dot">
+                        <span>....</span>
                     </div>
                     <div class="el">
                         <span>3</span>
@@ -78,7 +84,7 @@
                         <span>4</span>
                     </div>
                     <div class="el el-end">
-                        <span>5</span>
+                        <span>></span>
                     </div>
                 </div>
             </div>
