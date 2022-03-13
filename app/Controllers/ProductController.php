@@ -4,33 +4,23 @@ namespace App\Controllers;
 
 use App\Models\ProductModel;
 use App\Controllers\BaseController;
-use Core\Paginator;
 
 
 class ProductController extends BaseController
 {
-    // public function __construct()
-    // {
-    //     $this->product = new ProductModel;
-    // }
+    public $product;
 
-    // public function index()
-    // {
-    //     $products = $this->product->getData();
-    //     return $this->views('products/index', $data = [
-    //         'products' => $products,
-    //     ]);
-    // }
-
-    public function dashboard()
+    public function __construct()
     {
-        require(__DIR__ . "/../../views/dashboard/index.php");
+        $this->product = new ProductModel;
     }
 
     public function index($limit, $page)
     {
-        $paginate = new ProductModel();
-        $result = $paginate->getData($limit, $page);
+        $result = $this->product->getData($limit, $page);
+        
+        //$result['data'] = array_map("getMany", $result['data']);
+
         return $this->views('products/index', $data = [
             'products' => $result['data'],
             'total'    => $result['total'],
@@ -39,5 +29,7 @@ class ProductController extends BaseController
         ]);
     }
 
-    
+    // function getMany($value){
+    //     return array_push($value, $this->product->getTags($value['product_id']));
+    // }
 }

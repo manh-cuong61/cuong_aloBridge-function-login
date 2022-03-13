@@ -31,8 +31,13 @@ class ProductModel
             // exception
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-            // limit
-            $stmt_limit = $conn->prepare("SELECT * FROM products" . " LIMIT " . (($this->_page - 1) * $this->_limit) . ", $this->_limit");
+            //sql
+            $sql = "SELECT products.id as product_id, products.name as product_name, products.price, products.image, count(product_tags.id_tag) as count_tags
+                    FROM products left join product_tags on products.id = product_tags.id_product
+                    GROUP BY product_id
+                    LIMIT " . (($this->_page - 1) * $this->_limit) . ", $this->_limit";
+            //limit
+            $stmt_limit = $conn->prepare($sql);
 
             //all
             $stmt_all = $conn->prepare("SELECT * FROM products");
@@ -56,5 +61,32 @@ class ProductModel
         }
     }
 
-    
+    public function getTags($productId)
+    {
+        try {
+            // connect Mysql
+            $conn = $this->connection->pdo;
+
+            // exception
+            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+            //sql
+            $sql = "SELECT name 
+            FROM tags join product_tags on tags.id = product_tags.id_tag
+            WHERE product_tags.id_product = $productId";
+            $stmt = $conn->prepare($sql);
+
+            // execute limit
+            $stmt->execute();
+            $stmt->setFetchMode(PDO::FETCH_ASSOC);
+
+
+            // get data
+            $result = $stmt->fetchAll();
+
+            return $result;
+        } catch (PDOException $e) {
+            echo "Lỗi: " . $e->getMessage();
+        }
+    }
 }

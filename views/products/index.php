@@ -9,12 +9,12 @@
     <link rel="stylesheet" href="/aloBridge-function-login/public/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
     <style>
-        .main-bar .content-nav .el1 {
+        .main-bar .content-nav .el2 {
             background-color: #666;
             color: white;
         }
 
-        .main-bar .content-nav .el1 a {
+        .main-bar .content-nav .el2 a {
             color: white;
         }
     </style>
@@ -28,21 +28,28 @@
             <table>
                 <tr class="tr1">
                     <th id="th1">#</th>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Email Address</th>
-                    <th>Email Address</th>
-                    <th>Email Address</th>
-                    <th>Email Address</th>
+                    <th>Name</th>
+                    <th>Giá</th>
+                    <th>Tags</th>
+                    <th class="image">Image</th>
+                    <th>DELETE</th>
+                    <th>EDIT</th>
                 </tr>
                 <?php
+                // use App\Models\ProductModel;
+                // $product = new ProductModel;
                 foreach ($products as $product) {
+                    $product['tags'] = $this->product->getTags($product['product_id']);
                     echo "<tr>
-                        <td id='td1'>" .  $product['id'] . "</td>
-                        <td>" . $product['name'] . "</td>
-                        <td>" . $product['slug'] . "</td>
+                        <td id='td1'>" .  $product['product_id'] . "</td>
+                        <td>" . $product['product_name'] . "</td>
                         <td>" . $product['price'] . "</td>
-                        <td>" . $product['image'] . "</td>
+                        <td class='tag'>";
+                    foreach($product['tags'] as $tag ){
+                        echo  "<span>". $tag['name'] ."</span>";
+                    }    
+                    echo "</td>
+                        <td> <img src='/aloBridge-function-login/public/img/".$product['image'] ."' alt=''> </td>
                         <td><a class= 'button-delete' href=''>DELETE</a></td>
                         <td><a class= 'button-edit' href=''>EDIT</a></td>
                         </tr>";

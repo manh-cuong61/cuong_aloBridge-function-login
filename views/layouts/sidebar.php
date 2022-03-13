@@ -14,7 +14,7 @@
                     <i class="fa-solid fa-wallet"></i>
                     <a href="dashboard">Dashboard</a>
                 </div>
-                <div class="el">
+                <div class="el el2">
                     <i class="fa-solid fa-building-columns"></i>
                     <a href="product">Products</a>
                 </div>

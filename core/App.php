@@ -11,13 +11,19 @@ use App\Controllers\ProductController;
 
 class App
 {
+    private $limit;
+    private $page;
+
     private $route;
     function __construct()
     {
+        $this->limit = (isset($_GET['limit'])) ? $_GET['limit'] : 5;
+        $this->page = (isset($_GET['page'])) ? $_GET['page'] : 1;
+        
         $this->route = new Route;
         $this->route->get('/', function () {
-            $auth = new HomeController;
-            $auth->index();
+            $home = new HomeController;
+            $home->index();
         });
 
         $this->route->any('/login', function () {
@@ -25,19 +31,19 @@ class App
             $auth->login();
         });
         $this->route->get('/dashboard', function () {
-            $auth = new HomeController;
-            $auth->dashboard();
+            $home = new HomeController;
+            $home->dashboard();
         });
         // $this->route->get('/product', function () {
         //     $auth = new ProductController;
         //     $auth->index();
         // });
         $this->route->get('/product', function () {
-            $auth = new ProductController;
-            $limit = (isset($_GET['limit'])) ? $_GET['limit'] : 5;
-            $page = (isset($_GET['page'])) ? $_GET['page'] : 1;
-            $auth->index($limit, $page);
+            $product = new ProductController;
+            
+            $product->index($this->limit, $this->page);
         });
+
         $this->route->any('*', function () {
             echo '404 notfound';
         });
