@@ -26,14 +26,14 @@ class ProductModel extends BaseModel
                     FROM products left join product_tags on products.id = product_tags.id_product
                     GROUP BY product_id
                     LIMIT " . (($this->_page - 1) * $this->_limit) . ", $this->_limit";
-            $stmt_limit = $this->getAllData($sql_limit);
+            $stmt_limit = $this->excuteSql($sql_limit);
             
             $data_limit = $stmt_limit->fetchAll();
 
             //sql all
             $sql_all = "SELECT * FROM products";
              //all
-             $stmt_all =  $this->getAllData($sql_all);
+             $stmt_all =  $this->excuteSql($sql_all);
              $this->_total = $stmt_all->rowCount();
             
             // get data
@@ -55,7 +55,7 @@ class ProductModel extends BaseModel
             FROM tags join product_tags on tags.id = product_tags.id_tag
             WHERE product_tags.id_product = $productId";
         
-            $stmt = $this->getAllData($sql);
+            $stmt = $this->excuteSql($sql);
 
             // get data
             $result = $stmt->fetchAll();

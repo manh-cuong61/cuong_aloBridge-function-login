@@ -13,7 +13,7 @@ class BaseModel
         $this->connection = new DBConnection();
     }
 
-    public function getAllData($sql){
+    public function excuteSql($sql){
          // connect Mysql
          $conn = $this->connection->pdo;
 
