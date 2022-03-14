@@ -8,7 +8,6 @@ session_start();
 class HomeController
 {
     use Authenticate;
-
     
     public function index(){
        

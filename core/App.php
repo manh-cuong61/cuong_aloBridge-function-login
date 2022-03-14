@@ -7,16 +7,24 @@ use Core\Route;
 
 use App\Controllers\AuthController;
 use App\Controllers\HomeController;
+use App\Controllers\ProductController;
 
 class App
 {
+    private $limit;
+    private $page;
+
     private $route;
     function __construct()
     {
+        $config = require(__DIR__ . "/../config/config.php");
+        $this->limit = (isset($_GET['limit'])) ? $_GET['limit'] : $config['LIMIT'];
+        $this->page = (isset($_GET['page'])) ? $_GET['page'] : $config['PAGE'];
+        
         $this->route = new Route;
         $this->route->get('/', function () {
-            $auth = new HomeController;
-            $auth->index();
+            $home = new HomeController;
+            $home->index();
         });
 
         $this->route->any('/login', function () {
@@ -24,9 +32,19 @@ class App
             $auth->login();
         });
         $this->route->get('/dashboard', function () {
-            $auth = new HomeController;
-            $auth->dashboard();
+            $home = new HomeController;
+            $home->dashboard();
         });
+        // $this->route->get('/product', function () {
+        //     $auth = new ProductController;
+        //     $auth->index();
+        // });
+        $this->route->get('/product', function () {
+            $product = new ProductController;
+            
+            $product->index($this->limit, $this->page);
+        });
+
         $this->route->any('*', function () {
             echo '404 notfound';
         });

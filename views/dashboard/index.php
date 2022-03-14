@@ -31,11 +31,17 @@
                     <th>First Name</th>
                     <th>Last Name</th>
                     <th>Email Address</th>
+                    <th>Email Address</th>
+                    <th>Email Address</th>
+                    <th>Email Address</th>
                 </tr>
                 <tr>
                     <td id="td1">1</td>
                     <td>Mark</td>
                     <td>Otto</td>
+                    <td>markOtto@gmail.com</td>
+                    <td>markOtto@gmail.com</td>
+                    <td>markOtto@gmail.com</td>
                     <td>markOtto@gmail.com</td>
                 </tr>
                 <tr>
@@ -43,11 +49,17 @@
                     <td>Jacob</td>
                     <td>thrmton</td>
                     <td>Jacobthorton@gmail.com</td>
+                    <td>Jacobthorton@gmail.com</td>
+                    <td>Jacobthorton@gmail.com</td>
+                    <td>Jacobthorton@gmail.com</td>
                 </tr>
                 <tr>
                     <td id="td1">3</td>
                     <td>Larry</td>
                     <td>the Bird</td>
+                    <td>larrybird@gmail.com</td>
+                    <td>larrybird@gmail.com</td>
+                    <td>larrybird@gmail.com</td>
                     <td>larrybird@gmail.com</td>
                 </tr>
                 <tr>
@@ -55,11 +67,17 @@
                     <td>John</td>
                     <td>Doe</td>
                     <td>johndoe@gmail.com</td>
+                    <td>johndoe@gmail.com</td>
+                    <td>johndoe@gmail.com</td>
+                    <td>johndoe@gmail.com</td>
                 </tr>
                 <tr>
                     <td id="td1">5</td>
                     <td>Garry</td>
                     <td>Bird</td>
+                    <td>Garrybrid@gmail.com</td>
+                    <td>Garrybrid@gmail.com</td>
+                    <td>Garrybrid@gmail.com</td>
                     <td>Garrybrid@gmail.com</td>
                 </tr>
             </table>
