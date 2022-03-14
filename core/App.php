@@ -17,8 +17,9 @@ class App
     private $route;
     function __construct()
     {
-        $this->limit = (isset($_GET['limit'])) ? $_GET['limit'] : 5;
-        $this->page = (isset($_GET['page'])) ? $_GET['page'] : 1;
+        $config = require(__DIR__ . "/../config/config.php");
+        $this->limit = (isset($_GET['limit'])) ? $_GET['limit'] : $config['LIMIT'];
+        $this->page = (isset($_GET['page'])) ? $_GET['page'] : $config['PAGE'];
         
         $this->route = new Route;
         $this->route->get('/', function () {
