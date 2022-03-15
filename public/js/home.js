@@ -1,5 +1,4 @@
 // let btns = document.querySelectorAll(".el");
-
 // for(let i = 0; i < btns.length; i++) {
 //     btns[i].addEventListener("click", function(){
 //         current = document.querySelector(".acctive");
