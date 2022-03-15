@@ -12,11 +12,11 @@
             <div class="content-nav">
                 <div class="el el1">
                     <i class="fa-solid fa-wallet"></i>
-                    <a href="dashboard">Dashboard</a>
+                    <a href="http://localhost:8082/aloBridge-function-login/public/dashboard">Dashboard</a>
                 </div>
                 <div class="el el2">
                     <i class="fa-solid fa-building-columns"></i>
-                    <a href="product">Products</a>
+                    <a href="http://localhost:8082/aloBridge-function-login/public/product">Products</a>
                 </div>
                 <div class="el">
                     <i class="fa-solid fa-shuffle"></i>

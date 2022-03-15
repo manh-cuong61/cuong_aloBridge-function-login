@@ -14,7 +14,8 @@ class BaseModel
     }
 
     public function excuteSql($sql){
-         // connect Mysql
+        try{
+             // connect Mysql
          $conn = $this->connection->pdo;
 
          // exception
@@ -27,6 +28,12 @@ class BaseModel
          $stmt->execute();
          $stmt->setFetchMode(PDO::FETCH_ASSOC);
          
-         return $stmt;
+         return [
+                'conn' => $conn,
+                'stmt' => $stmt
+                ];
+        }catch (PDOException $e) {
+            echo "Lỗi: " . $e->getMessage();
+        }
     }
 }

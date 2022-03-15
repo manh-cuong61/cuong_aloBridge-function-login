@@ -41,8 +41,15 @@ class App
         // });
         $this->route->get('/product', function () {
             $product = new ProductController;
-            
             $product->index($this->limit, $this->page);
+        });
+        $this->route->get('/product/create', function () {
+            $product = new ProductController;
+            $product->create();
+        });
+        $this->route->post('/product', function () {
+            $product = new ProductController();
+            $product->store();
         });
 
         $this->route->any('*', function () {
