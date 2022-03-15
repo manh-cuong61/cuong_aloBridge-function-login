@@ -20,18 +20,16 @@ class ProductRequest
         if(empty($name)){
             array_push($msg['name'], 'Name is required!');
         }else{
-            $product = $this->product->getOne($name);
+            $product = $this->product->getProductQtyByName($name);
             if($product) {
                 array_push($msg['name'], 'Name already exist!');
             }
         }
 
         if(empty($price)){
-            if(empty($price)){
                 array_push($msg['price'], 'Price is required!');
-            }
         }else {
-            if(!is_numeric($price)){
+            if(!preg_match("/^[0-9]+$/", $price)){
                 array_push($msg['price'], 'Price must be number!');
             }
         }

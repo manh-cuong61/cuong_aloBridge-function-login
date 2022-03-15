@@ -66,9 +66,9 @@ class ProductModel extends BaseModel
             $sql = "INSERT INTO products (name, price, image)
                     VALUES ('$name', '$price', '$image')";
 
-            $last_id = $this->excuteSql($sql)['conn']->lastInsertId();
+            $lastId = $this->excuteSql($sql)['conn']->lastInsertId();
 
-            return $last_id;
+            return $lastId;
         } catch (PDOException $e) {
             echo "Lỗi: " . $e->getMessage();
         }
@@ -86,7 +86,7 @@ class ProductModel extends BaseModel
         }
     }
 
-    public function getOne($name){
+    public function getProductQtyByName($name){
         $sql = "SELECT id FROM products WHERE name = '$name'";
         $stmt = $this->excuteSql($sql)['stmt'];
         $count = $stmt->rowCount();

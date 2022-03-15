@@ -44,24 +44,23 @@ class ProductController extends BaseController
         $tags = $this->tags->get();
         $msg = $this->validateStore->store();
 
-        if (!empty( $msg)) {
+        if (!empty($msg)) {
             return $this->views('/products/create', $data = [
                 'tags' => $tags,
                 'msg' => $msg
             ]);
-        } else {
-            $IdProduct = $this->product->insertOne();
-
-            if (!empty($_POST['check_list'])) {
-                $tags = $_POST['check_list'];
-                foreach ($tags as $tag) {
-                    $this->product->insertProductTag($tag, $IdProduct);
-                }
-            }
-
-            $config = require(__DIR__ . "/../../config/config.php");
-
-            return $this->index($config['LIMIT'], $config['PAGE']);
         }
+        $IdProduct = $this->product->insertOne();
+
+        if (!empty($_POST['check_list'])) {
+            $tags = $_POST['check_list'];
+            foreach ($tags as $tag) {
+                $this->product->insertProductTag($tag, $IdProduct);
+            }
+        }
+
+        $config = require(__DIR__ . "/../../config/config.php");
+
+        return $this->index($config['LIMIT'], $config['PAGE']);
     }
 }
