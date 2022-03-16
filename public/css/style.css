@@ -164,6 +164,29 @@ body {
     display: flex;
     align-items: flex-end;
     font-size: 1rem;
+    width: 100%;
+}
+.content .header .header-left {
+    border-bottom: 0.0625rem solid #ebeaea 0.125rem;
+    display: flex;
+    align-items: flex-end;
+    font-size: 1rem;
+    width: 70%;
+}
+.content .header .header-right {
+    width: 30%;
+    padding-bottom: 10px;
+}
+.content .header .header-right a {
+    margin-left: 180px;
+    text-decoration: none;
+    border: 1px solid black;
+    padding: 3px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    background-color: #666;
+    
 }
 .content .header i {
     margin-left: 0.3125rem;
@@ -306,4 +329,89 @@ body {
     background-color: #18c418;
     font-weight: bold;
     margin-left: 4px;
+}
+
+.main .content .form-create {
+    width: 18rem;
+    height: 30rem;
+    border: 1px solid black;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+.main .content .form-create form {
+    width: 95%;
+    margin: auto;
+    padding-top: 2px;
+}
+.main .content .form-create form label {
+    font-weight: bold;
+    font-size: 1.1rem;
+    line-height: 24px;
+}
+.main .content .form-create form .div-input {
+    border: 1px solid black;
+    height: 30px;
+    padding-top: 0.13rem;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+.main .content .form-create form .div-input input {
+    margin-left: 10px;
+    border: none;
+    line-height: 25px;
+    width: 90%;
+    outline: none;
+    font-size: 16px;
+    margin-bottom: 2px;
+}
+.main .content .form-create form  .file {
+    border: none;
+    height: 100px;
+}
+.main .content .form-create form  .file input {
+    margin-left: 0px;
+}
+.main .content .form-create form .tag {
+    border: none;
+    height: 120px;
+}
+.main .content .form-create form .tag div {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+} 
+
+.main .content .form-create form .submit {
+    display: block;
+    margin: auto;
+    padding: 5px;
+    cursor: pointer;
+    width: 40%;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.main .content .form-create form .tag input {
+    width: 10%;
+    font-size: 25px;
+    margin-left: 0px;
+}
+.main .content .form-create form .tag label {
+    font-weight: normal;
+}
+
+.main .content .div-input .error{
+    font-size: 15px;
+    color: red;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.main .content .form-create .div-input #picture {
+    width: 6rem;
+    height: 6rem;
+    display: block;
+    margin: auto;
+    border: none;
 }
