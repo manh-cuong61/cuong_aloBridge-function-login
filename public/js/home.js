@@ -33,7 +33,13 @@ for(let i = 0; i < btnDel.length; i++) {
             if(code == 200) {
                 data = JSON.parse(xhttp.responseText).data;
                 //create table with new data
-                newTable = "<table class= 'table'> <tr class='tr1'><th id='th1'>#</th><th>Name</th><th>Giá</th><th>Tags</th><th class='image'>Image</th><th>DELETE</th><th>EDIT</th></tr>"
+                newTable = `<table class= 'table'> 
+                            <tr class='tr1'>
+                                <th id='th1'>#</th>
+                                <th>Name</th><th>Giá</th><th>Tags</th>
+                                <th class='image'>Image</th><th>DELETE</th>
+                                <th>EDIT</th>
+                            </tr>`
                 data.forEach(element => {
                     tags = '';
                     element.tags.forEach(val => {    
@@ -41,16 +47,18 @@ for(let i = 0; i < btnDel.length; i++) {
                         tags += val['name']
                         tags += "</span>"                       
                     })
-                    newTable += "<tr id='el-" 
-                    + element.product_id+"'><td id='td1'>" 
-                    +  element.product_id + "</td><td>" + element.product_name 
-                    + "</td><td>" + element.price 
-                    + "</td><td class='tag'>" + tags + "</td></td><td> <img src='/aloBridge-function-login/public/img/" 
-                    + element.image + "' alt=''> </td><td><a class= 'button-delete' href='' id='" 
-                    + element.product_id 
-                    + "'>DELETE</a></td><td><a class= 'button-edit' href=''>EDIT</a></td></tr>"
+
+                    newTable += `<tr id='el-${element.product_id}'>
+                                    <td id='td1'>${element.product_id}</td>
+                                    <td>${element.product_name}</td>
+                                    <td> ${element.price} </td>
+                                    <td class='tag'>${tags} </td>
+                                    <td> <img src='/aloBridge-function-login/public/img/${element.image}' alt=''> </td>
+                                    <td><a class= 'button-delete' href='' id='${element.product_id} '>DELETE</a></td>
+                                    <td><a class= 'button-edit' href=''>EDIT</a></td>
+                                </tr>`
                 });
-                newTable += "</table>"
+                newTable += `</table>`
                 //insert html 
                 header.insertAdjacentHTML("afterend", newTable)
 

@@ -94,17 +94,10 @@ class ProductController extends BaseController
 
             $i++;
         }
-        echo  json_encode([
-            'code' => 200,
-            'data' =>  $allDataProducts,
-            'total' => $result['total'],
-            'page' => $result['page'],
-            'limit' => $result['limit'],
-        ]);
 
         //check product deleted
         if ($product) {
-            json_encode([
+            echo json_encode([
                 'code' => 200,
                 'data' =>  $allDataProducts,
                 'total' => $result['total'],
@@ -112,7 +105,7 @@ class ProductController extends BaseController
                 'limit' => $result['limit'],
             ]);
         } else {
-            json_encode([
+            echo json_encode([
                 'code' => 500,
                 'data' =>  null,
                 'msg' => 'error'
