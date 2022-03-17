@@ -51,7 +51,10 @@ class App
             $product = new ProductController();
             $product->store();
         });
-
+        $this->route->delete('/product/{id}', function ($id) {
+            $product = new ProductController();
+            $product->destroy($this->limit, $this->page, $id);
+        });
         $this->route->any('*', function () {
             echo '404 notfound';
         });

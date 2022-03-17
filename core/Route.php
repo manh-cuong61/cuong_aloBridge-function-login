@@ -35,6 +35,11 @@ class Route
         $this->addRoute('POST', $url, $action);
     }
 
+    public function delete($url, $action)
+    {
+        $this->addRoute('DELETE', $url, $action);
+    }
+
     public function any($url, $action)
     {
         $this->addRoute('GET || POST', $url, $action);

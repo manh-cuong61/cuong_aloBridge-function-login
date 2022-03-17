@@ -93,4 +93,12 @@ class ProductModel extends BaseModel
 
         return $count;
     }
+
+    public function deleteOne($id) {
+        $sql = "DELETE FROM products where id = '$id'";
+        $stmt = $this->excuteSql($sql)['stmt'];
+        $count = $stmt->rowCount();
+
+        return $count;
+    }
 }
